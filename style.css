@@ -1,0 +1,93 @@
+@import url('https://fonts.google.apis.com/css?family=Poppins:100;200;300;400;500;600;700;800;900');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./assets/picture_city.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container .content
+{
+    position: relative;
+}
+
+.content
+{
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container#blur.active
+{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+a
+{
+    display: flex;
+    width: 120px;
+    height: 45px;
+    font-size: xx-large;
+    position: relative;
+    padding: 5px 50px;
+    margin-top: 20px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+a.popup-button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    left: 200px;
+    top: 30px;
+    position: relative;
+    font-size: xx-large;
+    justify-content: center;
+    text-align: center;
+}
+
+#popup
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#popup.active
+{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
